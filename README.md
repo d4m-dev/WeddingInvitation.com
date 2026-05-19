@@ -25,7 +25,6 @@ Dự án có cấu trúc rõ ràng, phân chia các thành phần tĩnh, động
 WeddingInvitation.com/
 │
 ├── .github/workflows/       # Cấu hình CI/CD (GitHub Actions)
-├── dist/                    # Chứa mã JavaScript đã được đóng gói (bundle) thông qua esbuild
 ├── src/                     # Mã nguồn chính của dự án
 │   ├── assets/              # Chứa tài nguyên đa phương tiện tĩnh
 │   │   ├── images/          # Hình ảnh, banner, gallery, placeholder
@@ -49,7 +48,7 @@ WeddingInvitation.com/
 ├── package.json             # Quản lý thư viện (NPM) và các câu lệnh thực thi (scripts)
 ├── eslint.config.mjs        # Cấu hình ESLint (Linter kiểm tra mã nguồn JavaScript)
 ├── server.py                # Script Python tạo server web mô phỏng nhanh
-└── deploy.py / translate.py # Script hỗ trợ triển khai và biên dịch nội bộ
+└── deploy.py                # Script hỗ trợ triển khai
 ```
 
 ---
