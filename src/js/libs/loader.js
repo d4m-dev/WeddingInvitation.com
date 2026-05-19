@@ -36,7 +36,7 @@ const loadAOS = (c) => {
 
     return Promise.all([loadCss(), loadJs()]).then(() => {
         if (typeof window.AOS === 'undefined') {
-            throw new Error('AOS library failed to load');
+            throw new Error('Thư viện AOS tải thất bại');
         }
 
         window.AOS.init();
@@ -54,7 +54,7 @@ const loadConfetti = (c) => {
         const sc = document.createElement('script');
         sc.onerror = rej;
         sc.onload = () => {
-            typeof window.confetti === 'undefined' ? rej(new Error('Confetti library failed to load')) : res();
+            typeof window.confetti === 'undefined' ? rej(new Error('Thư viện Confetti tải thất bại')) : res();
         };
 
         sc.src = uri;

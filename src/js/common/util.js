@@ -139,11 +139,11 @@ export const util = (() => {
 
     /**
      * @param {HTMLElement} button
-     * @param {string} [message='Loading']
+     * @param {string} [message='Đang tải']
      * @param {boolean} [replace=false]
      * @returns {object}
      */
-    const disableButton = (button, message = 'Loading', replace = false) => {
+    const disableButton = (button, message = 'Đang tải', replace = false) => {
         button.disabled = true;
 
         const tmp = button.innerHTML;
@@ -235,14 +235,14 @@ export const util = (() => {
      */
     const parseUserAgent = (userAgent) => {
         if (!userAgent || typeof userAgent !== 'string') {
-            return 'Unknown';
+            return 'Không xác định';
         }
 
-        const deviceType = deviceTypes.find((i) => i.regex.test(userAgent))?.type ?? 'Unknown';
-        const browser = browsers.find((i) => i.regex.test(userAgent))?.name ?? 'Unknown';
+        const deviceType = deviceTypes.find((i) => i.regex.test(userAgent))?.type ?? 'Không xác định';
+        const browser = browsers.find((i) => i.regex.test(userAgent))?.name ?? 'Không xác định';
         const osMatch = operatingSystems.find((i) => i.regex.test(userAgent));
 
-        const osName = osMatch ? osMatch.name : 'Unknown';
+        const osName = osMatch ? osMatch.name : 'Không xác định';
         const osVersion = osMatch ? (userAgent.match(osMatch.regex)?.[1]?.replace(/_/g, '.') ?? null) : null;
 
         return `${browser} ${deviceType} ${osVersion ? `${osName} ${osVersion}` : osName}`;

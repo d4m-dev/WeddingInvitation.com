@@ -32,7 +32,7 @@ export const pool = (() => {
          */
         getInstance: (name) => {
             if (!cachePool || !cachePool.has(name)) {
-                throw new Error(`please init cache first: ${name}`);
+                throw new Error(`vui lòng khởi tạo cache trước: ${name}`);
             }
 
             return cachePool.get(name);
@@ -54,7 +54,7 @@ export const pool = (() => {
          */
         init: (callback, lists = []) => {
             if (!window.isSecureContext) {
-                throw new Error('this application required secure context');
+                throw new Error('ứng dụng này yêu cầu kết nối bảo mật (HTTPS)');
             }
 
             cachePool = new Map();
@@ -95,7 +95,7 @@ export const cacheWrapper = (cacheName) => {
             }
 
             if (ttl === 0) {
-                throw new Error('Cache max age cannot be 0');
+                throw new Error('Thời gian lưu trữ cache tối đa không thể bằng 0');
             }
 
             headers.set('Cache-Control', `public, max-age=${Math.floor(ttl / 1000)}`);
@@ -234,7 +234,7 @@ export const request = (method, path) => {
             }
 
             if (req.method !== HTTP_GET) {
-                console.warn('Only method GET can be cached');
+                console.warn('Chỉ phương thức GET mới có thể được lưu cache');
                 return wrapperFetch();
             }
 
@@ -268,10 +268,10 @@ export const request = (method, path) => {
                 reqAttempts++;
 
                 if (reqAttempts > reqRetry) {
-                    throw new Error(`Max retries reached: ${error}`);
+                    throw new Error(`Đã đạt số lần thử tối đa: ${error}`);
                 }
 
-                console.warn(`Retrying fetch (${reqAttempts}/${reqRetry}): ${input.toString()}`);
+                console.warn(`Đang thử tải lại (${reqAttempts}/${reqRetry}): ${input.toString()}`);
                 await new Promise((resolve) => window.setTimeout(resolve, reqDelay));
 
                 return attempt();
@@ -351,7 +351,7 @@ export const request = (method, path) => {
                 });
             }).catch((err) => {
                 if (err.name === ERROR_ABORT) {
-                    console.warn('Fetch aborted:', err);
+                    console.warn('Tải dữ liệu đã bị hủy:', err);
                     return err;
                 }
 
@@ -464,7 +464,7 @@ export const request = (method, path) => {
          */
         body(body) {
             if (req.method === HTTP_GET) {
-                throw new Error('GET method does not support body');
+                throw new Error('Phương thức GET không hỗ trợ body');
             }
 
             req.body = JSON.stringify(body);

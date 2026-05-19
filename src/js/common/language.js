@@ -1,6 +1,7 @@
 export const lang = (() => {
 
     const countryMapping = {
+        'vi': 'VN',
         'id': 'ID',
         'en': 'US',
         'fr': 'FR',
@@ -16,7 +17,6 @@ export const lang = (() => {
         'pt': 'PT',
         'tr': 'TR',
         'th': 'TH',
-        'vi': 'VN',
         'ms': 'MY',
         'hi': 'IN',
     };
@@ -85,7 +85,7 @@ export const lang = (() => {
             let isFound = true;
             if (!countryMapping[l]) {
                 isFound = false;
-                console.warn('Language not found, please add manually in countryMapping');
+                console.warn('Không tìm thấy ngôn ngữ, vui lòng thêm thủ công vào countryMapping');
             }
 
             country = isFound ? countryMapping[l] : 'US';

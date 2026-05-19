@@ -55,7 +55,7 @@ export const auth = (() => {
     const getDetailUser = () => {
         return request(HTTP_GET, '/api/user').token(session.getToken()).send().then((res) => {
             if (res.code !== HTTP_STATUS_OK) {
-                throw new Error('failed to get user.');
+                throw new Error('Không thể lấy thông tin người dùng.');
             }
 
             Object.entries(res.data).forEach(([k, v]) => user.set(k, v));

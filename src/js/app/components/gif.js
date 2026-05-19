@@ -203,7 +203,7 @@ export const gif = (() => {
             })
             .catch((err) => {
                 if (err.name === ERROR_ABORT) {
-                    console.warn('Fetch abort:', err);
+                    console.warn('Tải dữ liệu đã bị huỷ:', err);
                 } else {
                     util.notify(err).error();
                 }

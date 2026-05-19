@@ -117,7 +117,7 @@ export const cache = (cacheName) => {
             try {
                 const checkUrl = new URL(input);
                 if (!checkUrl.protocol.includes('blob')) {
-                    throw new Error('Is not blob');
+                    throw new Error('Không phải là định dạng blob');
                 }
             } catch {
                 input = await get(input);

@@ -60,7 +60,7 @@ export const session = (() => {
             .send()
             .then((res) => {
                 if (res.code !== HTTP_STATUS_OK) {
-                    throw new Error('failed to get config.');
+                    throw new Error('Không thể lấy cấu hình.');
                 }
 
                 const config = storage('config');
