@@ -4,7 +4,7 @@ import sys
 import time
 import threading
 import os
-
+# python3 /root/WeddingInvitation.com/deploy.py
 # --- MÀU SẮC ANSI GIAO DIỆN ---
 class Colors:
     HEADER = '\033[95m'
