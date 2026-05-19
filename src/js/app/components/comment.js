@@ -36,7 +36,7 @@ export const comment = (() => {
      */
     const onNullComment = () => {
         const desc = lang
-            .on('id', '📢 Yuk, share undangan ini biar makin rame komentarnya! 🎉')
+            .on('id', '📢 Hãy chia sẻ thiệp mời này để có thêm nhiều bình luận nhé! 🎉')
             .on('en', '📢 Let\'s share this invitation to get more comments! 🎉')
             .get();
 
@@ -333,7 +333,7 @@ export const comment = (() => {
         }
 
         if (!gifIsOpen && form.value?.trim().length === 0) {
-            util.notify('Comments cannot be empty.').warning();
+            util.notify('Bình luận không được để trống.').warning();
             return;
         }
 
@@ -426,7 +426,7 @@ export const comment = (() => {
         const nameValue = name.value;
 
         if (nameValue.length === 0) {
-            util.notify('Name cannot be empty.').warning();
+            util.notify('Tên không được để trống.').warning();
 
             if (id) {
                 // scroll to form.
@@ -437,7 +437,7 @@ export const comment = (() => {
 
         const presence = document.getElementById('form-presence');
         if (!id && presence && presence.value === '0') {
-            util.notify('Please select your attendance status.').warning();
+            util.notify('Vui lòng chọn trạng thái tham dự của bạn.').warning();
             return;
         }
 
@@ -446,7 +446,7 @@ export const comment = (() => {
         const gifCancel = gif.buttonCancel(id);
 
         if (gifIsOpen && !gifId) {
-            util.notify('Gif cannot be empty.').warning();
+            util.notify('Gif không được để trống.').warning();
             return;
         }
 
@@ -456,7 +456,7 @@ export const comment = (() => {
 
         const form = document.getElementById(`form-${id ? `inner-${id}` : 'comment'}`);
         if (!gifIsOpen && form.value?.trim().length === 0) {
-            util.notify('Comments cannot be empty.').warning();
+            util.notify('Bình luận không được để trống.').warning();
             return;
         }
 
@@ -643,7 +643,7 @@ export const comment = (() => {
         }
 
         const isParent = is_parent && !session.isAdmin();
-        document.getElementById(`button-${id}`).insertAdjacentElement('afterend', card.renderEdit(id, isChecklist, isParent, !!gifImage));
+        document.getElementById(`button-${id}`).insertAdjacentElement('afterend', card.renderSửa(id, isChecklist, isParent, !!gifImage));
 
         if (gifImage) {
             gif.onOpen(id, () => {

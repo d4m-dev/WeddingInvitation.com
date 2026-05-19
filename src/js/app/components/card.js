@@ -70,9 +70,9 @@ export const card = (() => {
         }
 
         if (session.isAdmin() && c.is_admin && (!c.gif_url || gif.isActive())) {
-            action += `<button style="font-size: 0.8rem;" onclick="undangan.comment.edit(this, ${c.is_parent ? 'true' : 'false'})" data-uuid="${c.uuid}" class="btn btn-sm btn-outline-auto rounded-4 py-0 me-1 shadow-sm" data-own="${c.own}" data-offline-disabled="false">Edit</button>`;
+            action += `<button style="font-size: 0.8rem;" onclick="undangan.comment.edit(this, ${c.is_parent ? 'true' : 'false'})" data-uuid="${c.uuid}" class="btn btn-sm btn-outline-auto rounded-4 py-0 me-1 shadow-sm" data-own="${c.own}" data-offline-disabled="false">Sửa</button>`;
         } else if (owns.has(c.uuid) && config.get('can_edit') !== false && (!c.gif_url || gif.isActive())) {
-            action += `<button style="font-size: 0.8rem;" onclick="undangan.comment.edit(this, ${c.is_parent ? 'true' : 'false'})" data-uuid="${c.uuid}" class="btn btn-sm btn-outline-auto rounded-4 py-0 me-1 shadow-sm" data-offline-disabled="false">Edit</button>`;
+            action += `<button style="font-size: 0.8rem;" onclick="undangan.comment.edit(this, ${c.is_parent ? 'true' : 'false'})" data-uuid="${c.uuid}" class="btn btn-sm btn-outline-auto rounded-4 py-0 me-1 shadow-sm" data-offline-disabled="false">Sửa</button>`;
         }
 
         if (session.isAdmin()) {
@@ -245,14 +245,14 @@ export const card = (() => {
      * @param {boolean} is_gif 
      * @returns {HTMLDivElement}
      */
-    const renderEdit = (id, presence, is_parent, is_gif) => {
+    const renderSửa = (id, presence, is_parent, is_gif) => {
         id = util.escapeHtml(id);
 
         const inner = document.createElement('div');
         inner.classList.add('my-2');
         inner.id = `inner-${id}`;
         const template = `
-        <p class="my-1 mx-0 p-0" style="font-size: 0.95rem;"><i class="fa-solid fa-pen me-2"></i>Edit</p>
+        <p class="my-1 mx-0 p-0" style="font-size: 0.95rem;"><i class="fa-solid fa-pen me-2"></i>Sửa</p>
         ${!is_parent ? '' : `
         <select class="form-select shadow-sm mb-2 rounded-4" id="form-inner-presence-${id}" data-offline-disabled="false">
             <option value="1" ${presence ? 'selected' : ''}>&#9989; Datang</option>
@@ -280,7 +280,7 @@ export const card = (() => {
 
     return {
         init,
-        renderEdit,
+        renderSửa,
         renderReply,
         renderLoading,
         renderReadMore,

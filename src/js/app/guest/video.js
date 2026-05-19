@@ -69,7 +69,7 @@ export const video = (() => {
                 }
 
                 if (res.status !== HTTP_STATUS_PARTIAL_CONTENT) {
-                    throw new Error('failed to fetch video');
+                    throw new Error('không thể tải video');
                 }
 
                 vid.addEventListener('error', () => progress.invalid('video'));
@@ -101,7 +101,7 @@ export const video = (() => {
                 return loaded.then(() => res);
             })).catch((err) => {
                 bar.style.backgroundColor = 'red';
-                inf.innerText = `Error loading video`;
+                inf.innerText = `Lỗi khi tải video`;
                 console.error(err);
             });
         };

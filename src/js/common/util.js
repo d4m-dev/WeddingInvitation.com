@@ -186,7 +186,7 @@ export const util = (() => {
         const data = button.getAttribute('data-copy');
 
         if (!data || data.length === 0) {
-            notify('Nothing to copy').warning();
+            notify('Không có gì để sao chép').warning();
             return;
         }
 
@@ -196,7 +196,7 @@ export const util = (() => {
             await navigator.clipboard.writeText(data);
         } catch {
             button.disabled = false;
-            notify('Failed to copy').error();
+            notify('Sao chép thất bại').error();
             return;
         }
 

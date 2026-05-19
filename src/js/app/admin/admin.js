@@ -73,7 +73,7 @@ export const admin = (() => {
             .token(session.getToken())
             .body({ tenor_key: form.value.length ? form.value : null })
             .send()
-            .then(() => util.notify(`success ${form.value.length ? 'add' : 'remove'} tenor key`).success())
+            .then(() => util.notify(`thành công ${form.value.length ? 'thêm' : 'xóa'} khóa tenor`).success())
             .finally(() => {
                 form.disabled = false;
                 btn.restore();
@@ -113,7 +113,7 @@ export const admin = (() => {
         const newest = document.getElementById('new_password');
 
         if (old.value.length === 0 || newest.value.length === 0) {
-            util.notify('Password cannot be empty').warning();
+            util.notify('Mật khẩu không được để trống').warning();
             return;
         }
 
@@ -136,7 +136,7 @@ export const admin = (() => {
 
                 old.value = null;
                 newest.value = null;
-                util.notify('Success change password').success();
+                util.notify('Đổi mật khẩu thành công').success();
             })
             .finally(() => {
                 btn.restore(true);
@@ -154,7 +154,7 @@ export const admin = (() => {
         const name = document.getElementById('form-name');
 
         if (name.value.length === 0) {
-            util.notify('Name cannot be empty').warning();
+            util.notify('Tên không được để trống').warning();
             return;
         }
 
@@ -171,7 +171,7 @@ export const admin = (() => {
                 }
 
                 util.safeInnerHTML(document.getElementById('dashboard-name'), `${util.escapeHtml(name.value)}<i class="fa-solid fa-hands text-warning ms-2"></i>`);
-                util.notify('Success change name').success();
+                util.notify('Đổi tên thành công').success();
             })
             .finally(() => {
                 name.disabled = false;
@@ -267,12 +267,12 @@ export const admin = (() => {
         const tz = document.getElementById('form-timezone');
 
         if (tz.value.length === 0) {
-            util.notify('Time zone cannot be empty').warning();
+            util.notify('Múi giờ không được để trống').warning();
             return;
         }
 
         if (!Intl.supportedValuesOf('timeZone').includes(tz.value)) {
-            util.notify('Timezone not supported').warning();
+            util.notify('Múi giờ không được hỗ trợ').warning();
             return;
         }
 
@@ -288,7 +288,7 @@ export const admin = (() => {
                     return;
                 }
 
-                util.notify('Success change tz').success();
+                util.notify('Đổi múi giờ thành công').success();
             })
             .finally(() => {
                 tz.disabled = false;

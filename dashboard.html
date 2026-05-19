@@ -1,25 +1,25 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
+<html lang="vi" data-bs-theme="auto">
 
 <head>
-    <!-- Common -->
+    <!-- Chung -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Dashboard Ulems">
     <title>Dashboard Ulems</title>
 
-    <!-- Appearance -->
+    <!-- Giao Diện -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Dashboard Ulems">
     <meta name="theme-color" content="#f8f9fa">
     <meta name="color-scheme" content="dark light">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="apple-touch-icon" sizes="180x180" href="src/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="src/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="src/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/favicon/favicon-32x32.png"> <!-- Biểu tượng Favicon 32x32 -->
+    <link rel="icon" type="image/png" sizes="16x16" href="src/favicon/favicon-16x16.png"> <!-- Biểu tượng Favicon 16x16 -->
     <link rel="manifest" href="src/favicon/site.webmanifest">
     
-    <!-- Preconnect CDN -->
+    <!-- Kết Nối Sớm CDN -->
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -27,30 +27,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
 
-    <!-- Preload Resources -->
+    <!-- Tải Trước Tài Nguyên -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" as="style">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha256-2FMn2Zx6PuH5tdBQDRNwrOo60ts5wWPC9R8jK67b3t4=" crossorigin="anonymous" as="style">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css" integrity="sha256-4rTIfo5GQTi/7UJqoyUJQKzxW8VN/YBH31+Cy+vTZj4=" crossorigin="anonymous" as="style">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha256-5P1JGBOIxI7FBAvT/mb1fCnI5n/NhQKzNUuW7Hq0fMc=" crossorigin="anonymous" as="script">
 
-    <!-- Font -->
+    <!-- Phông Chữ -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap">
 
-    <!-- Dependencies CSS -->
+    <!-- CSS Phụ Thuộc -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha256-2FMn2Zx6PuH5tdBQDRNwrOo60ts5wWPC9R8jK67b3t4=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css" integrity="sha256-4rTIfo5GQTi/7UJqoyUJQKzxW8VN/YBH31+Cy+vTZj4=" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="./src/css/admin.css">
 
-    <!-- Dependencies JS -->
+    <!-- JS Phụ Thuộc -->
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha256-5P1JGBOIxI7FBAvT/mb1fCnI5n/NhQKzNUuW7Hq0fMc=" crossorigin="anonymous"></script>
     <script src="./dist/admin.js"></script>
 </head>
 
-<!-- <html lang="en" data-bs-theme="auto"> ['auto', 'dark', 'light'] -->
+<!-- <html lang="vi" data-bs-theme="auto"> ['auto', 'dark', 'light'] -->
 
 <body data-url="https://api.ulems.my.id/">
 
-    <!-- Nav bottom -->
+    <!-- Thanh Điều Hướng Dưới Cùng -->
     <nav class="navbar navbar-expand fixed-bottom rounded-top-4 border-top d-md-none d-lg-none d-xl-none p-0">
         <ul class="navbar-nav nav-justified w-100 align-items-center">
             <li class="nav-item">
@@ -68,10 +68,10 @@
         </ul>
     </nav>
 
-    <!-- Main -->
+    <!-- Chính -->
     <main class="container mt-4 mb-5">
 
-        <!-- Header -->
+        <!-- Tiêu Đề -->
         <div class="d-none d-sm-flex justify-content-between align-items-center mt-4 mb-5 pt-1">
             <h4 class="m-0 p-0 flex-grow-1 fw-bold">Undangan<i class="fa-solid fa-fire text-danger ms-2"></i></h4>
             <div class="m-0 p-0 flex-grow-1 text-end" id="dashboard-name" style="font-size: 1.4rem;">
@@ -81,7 +81,7 @@
             </div>
         </div>
 
-        <!-- Body -->
+        <!-- Nội Dung -->
         <div class="row m-0 p-0">
 
             <!-- Menu -->
@@ -108,14 +108,14 @@
                 </ul>
             </div>
 
-            <!-- Content -->
+            <!-- Nội Dung -->
             <div class="col-md-9 m-0 p-0">
                 <div class="tab-content">
 
-                    <!-- Home -->
+                    <!-- Trang Chủ -->
                     <section class="tab-pane fade show active" id="pills-home" role="tabpanel" tabindex="0">
 
-                        <!-- Sub Header -->
+                        <!-- Tiêu Đề Phụ -->
                         <div class="rounded-4 p-2 mb-4 shadow" style="background-color: var(--bs-gray-200)">
                             <div class="d-flex justify-content-between">
                                 <h5 class="fw-bold my-1 ms-0 p-0" style="color: var(--bs-gray-900); font-size: 1rem;"><i class="fa-solid fa-home mx-2"></i>Home</h5>
@@ -130,7 +130,7 @@
                             </div>
                         </div>
 
-                        <!-- Stats -->
+                        <!-- Thống Kê -->
                         <div class="row">
                             <div class="col col-xl-3 col-6 mb-3">
                                 <div class="rounded-4 shadow p-3 border-0" style="background: #8573F1;">
@@ -226,7 +226,7 @@
                             <div class="col-lg-6 col-12">
                                 <!-- Form -->
                                 <div class="bg-theme-auto p-3 mb-3 rounded-4 shadow">
-                                    <div class="d-block" id="comment-form-default">
+                                    <div class="d-block" id="comment-form-default"> <!-- Biểu Mẫu Bình Luận Mặc Định -->
                                         <label for="form-comment" class="form-label fw-bold my-1"><i class="fa-solid fa-comment me-2"></i>Comment</label>
 
                                         <div class="position-relative">
@@ -244,19 +244,19 @@
                             </div>
 
                             <div class="col-lg-6 col-12">
-                                <!-- Comments -->
+                                <!-- Bình Luận -->
                                 <div class="mb-2" id="comments" data-loading="false"></div>
 
-                                <!-- Pagination -->
+                                <!-- Phân Trang -->
                                 <nav class="d-flex d-none justify-content-center py-3 mb-4" id="pagination"></nav>
                             </div>
                         </div>
                     </section>
 
-                    <!-- Setting -->
+                    <!-- Cài Đặt -->
                     <section class="tab-pane fade" id="pills-setting" role="tabpanel" tabindex="0">
 
-                        <!-- Sub Header -->
+                        <!-- Tiêu Đề Phụ -->
                         <div class="rounded-4 p-2 mb-4 shadow" style="background-color: var(--bs-gray-200)">
                             <h5 class="fw-bold my-1 ms-0 p-0" style="color: var(--bs-gray-900); font-size: 1rem;"><i class="fa-solid fa-gear mx-2"></i>Setting</h5>
                         </div>
@@ -266,7 +266,7 @@
                             <p class="mx-0 mt-0 mb-1 p-0 fw-bold"><i class="fa-solid fa-envelope me-2"></i>Email</p>
                             <p class="m-0 p-0" id="dashboard-email"></p>
                         </div>
-
+                        <!-- Tên -->
                         <!-- Name -->
                         <div class="p-3 bg-theme-auto mb-3 rounded-4 shadow">
                             <p class="mx-0 mt-0 mb-1 p-0 fw-bold"><i class="fa-solid fa-person me-2"></i>Name</p>
@@ -280,7 +280,7 @@
                                 <button type="button" class="btn btn-sm btn-primary rounded-4 shadow-sm" id="button-change-name" onclick="undangan.admin.changeName(this)" disabled data-offline-disabled="false">Change</button>
                             </div>
                         </div>
-
+                        <!-- Khóa Truy Cập -->
                         <!-- Access Key -->
                         <div class="p-3 bg-theme-auto mb-3 rounded-4 shadow">
                             <p class="mx-0 mt-0 mb-1 p-0 fw-bold"><i class="fa-solid fa-key me-2"></i>Access Key</p>
@@ -294,7 +294,7 @@
                                 <button type="button" class="btn btn-sm btn-primary rounded-4 shadow-sm" onclick="undangan.admin.regenerate(this)" data-offline-disabled="false">Regenerate</button>
                             </div>
                         </div>
-
+                        <!-- Múi Giờ -->
                         <!-- Time Zone -->
                         <div class="p-3 bg-theme-auto mb-3 rounded-4 shadow">
                             <p class="mx-0 mt-0 mb-1 p-0 fw-bold"><i class="fa-solid fa-location-dot me-2"></i>Time Zone</p>
@@ -309,7 +309,7 @@
                                 <button type="button" class="btn btn-sm btn-primary rounded-4 shadow-sm" id="button-timezone" onclick="undangan.admin.changeTz(this)" disabled data-offline-disabled="false">Change</button>
                             </div>
                         </div>
-
+                        <!-- Khóa Tenor -->
                         <!-- Tenor Key -->
                         <div class="p-3 bg-theme-auto mb-3 rounded-4 shadow">
                             <p class="mx-0 mt-0 mb-1 p-0 fw-bold"><i class="fa-solid fa-photo-film me-2"></i>Tenor Key</p>
@@ -324,7 +324,7 @@
                             </div>
                         </div>
 
-                        <!-- Toggle -->
+                        <!-- Tùy Chọn -->
                         <div class="p-3 bg-theme-auto mb-3 rounded-4 shadow">
                             <p class="mx-0 mt-0 mb-1 p-0 fw-bold"><i class="fa-solid fa-sliders me-2"></i>Control</p>
 
@@ -349,7 +349,7 @@
                                 <label class="form-check-label" style="cursor:pointer;" for="deleteComment">Can delete</label>
                             </div>
                         </div>
-
+                        <!-- Đổi Mật Khẩu -->
                         <!-- Change Password -->
                         <div class="p-3 bg-theme-auto mb-3 rounded-4 shadow">
                             <p class="mx-0 mt-0 mb-1 p-0 fw-bold"><i class="fa-solid fa-lock me-2"></i>Change Password</p>
@@ -368,7 +368,7 @@
                             </div>
                         </div>
 
-                        <!-- Logout -->
+                        <!-- Đăng Xuất -->
                         <div class="d-block d-md-none d-lg-none d-xl-none">
                             <div class="p-3 bg-theme-auto mb-3 rounded-4 shadow">
                                 <button type="button" class="btn btn-danger btn-sm w-100 text-center fw-semibold rounded-4 shadow-sm" onclick="undangan.admin.logout()">
@@ -377,7 +377,7 @@
                             </div>
                         </div>
 
-                        <div class="p-3 bg-theme-auto mb-4 rounded-4 shadow">
+                        <div class="p-3 bg-theme-auto mb-4 rounded-4 shadow"> <!-- Dự Án Yêu Thương -->
                             <p class="mx-0 mt-0 mb-1 p-0 fw-bold"><i class="fa-solid fa-heart me-2"></i>Love Project</p>
                             <p class="m-0 p-0">Discover and support this project on <i class="fa-brands fa-github me-1"></i><a target="_blank" href="https://github.com/dewanakl/undangan">GitHub</a></p>
                         </div>
@@ -386,8 +386,7 @@
             </div>
         </div>
     </main>
-
-    <!-- Modal login -->
+    <!-- Modal Đăng Nhập -->
     <div class="modal fade" id="mainModal" data-bs-backdrop="static" data-bs-keyboard="false" aria-label="modal login" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content rounded-4">
